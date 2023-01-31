@@ -28,6 +28,7 @@ const prezzoBase = document.getElementById('prezzoBase')
 prezzoBase.innerHTML = prezzo.toFixed(2)
 
 if (eta < 19) {
+    document.getElementById("prezzoBarrato").style.textDecoration = "line-through";
     prezzo = prezzo * (1 - scontoMin)
     console.log(prezzo.toFixed(2))
 
@@ -39,6 +40,7 @@ if (eta < 19) {
 }
 
 if (eta > 64) {
+    document.getElementById("prezzoBarrato").style.textDecoration = "line-through";
     prezzo = prezzo * (1 - scontoO65)
     console.log(prezzo.toFixed(2))
 
