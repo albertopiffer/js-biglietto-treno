@@ -25,26 +25,26 @@ nome.innerHTML = NomCog
 prezzo = nKm * prezzoKm
 
 const prezzoBase = document.getElementById('prezzoBase')
-prezzoBase.innerHTML = prezzo
+prezzoBase.innerHTML = prezzo.toFixed(2)
 
 if (eta < 19) {
     prezzo = prezzo * (1 - scontoMin)
-    console.log(prezzo)
+    console.log(prezzo.toFixed(2))
 
     const sconto = document.getElementById('sconto')
     sconto.innerHTML = 20
 
     const prezzoFinale = document.getElementById('prezzoFinale')
-    prezzoFinale.innerHTML = prezzo
+    prezzoFinale.innerHTML = prezzo.toFixed(2)
 }
 
 if (eta > 64) {
     prezzo = prezzo * (1 - scontoO65)
-    console.log(prezzo)
+    console.log(prezzo.toFixed(2))
 
     const sconto = document.getElementById('sconto')
     sconto.innerHTML = 40
 
     const prezzoFinale = document.getElementById('prezzoFinale')
-    prezzoFinale.innerHTML = prezzo
+    prezzoFinale.innerHTML = prezzo.toFixed(2)
 }
