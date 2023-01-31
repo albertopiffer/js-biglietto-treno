@@ -6,52 +6,25 @@ const scontoO65 = parseFloat (0.4)
 console.log(scontoO65)
 
 let nKm = parseInt(prompt('Numero di km:'))
-console.log(nKm)
-
-let NomCog = prompt('Nome e Cognome:')
-console.log(NomCog)
+console.log('km: ', nKm)
 
 let eta = parseInt(prompt('Età passeggero:'))
-console.log(eta)
+console.log('età:', eta)
 
 let prezzo = parseFloat
 
-const km = document.getElementById('km')
-km.innerHTML = nKm
-
-const nome = document.getElementById('nome')
-nome.innerHTML = NomCog
-
 prezzo = nKm * prezzoKm
 
-const prezzoBase = document.getElementById('prezzoBase')
-prezzoBase.innerHTML = prezzo.toFixed(2)
-
 if (eta < 19) {
-    document.getElementById("prezzoBarrato").style.textDecoration = "line-through";
     prezzo = prezzo * (1 - scontoMin)
-    console.log(prezzo.toFixed(2))
-
-    const sconto = document.getElementById('sconto')
-    sconto.innerHTML = 20
-
-    const prezzoFinale = document.getElementById('prezzoFinale')
-    prezzoFinale.innerHTML = prezzo.toFixed(2)
+    console.log('u18')
 }
 
 if (eta > 64) {
-    document.getElementById("prezzoBarrato").style.textDecoration = "line-through";
     prezzo = prezzo * (1 - scontoO65)
-    console.log(prezzo.toFixed(2))
-
-    const sconto = document.getElementById('sconto')
-    sconto.innerHTML = 40
-
-    const prezzoFinale = document.getElementById('prezzoFinale')
-    prezzoFinale.innerHTML = prezzo.toFixed(2)
+    console.log('o65')
 }
+console.log('prezzo: ', prezzo.toFixed(2))
 
-if (eta <65 && eta >18) {
-    document.getElementById("scontoHidden").style.display = "none";
-    document.getElementById("prezzoHidden").style.display = "none";
-}
+const prezzoFinale = document.getElementById('prezzoFinale')
+prezzoFinale.innerHTML = prezzo.toFixed(2)
