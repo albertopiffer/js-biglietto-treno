@@ -48,3 +48,8 @@ if (eta > 64) {
     const prezzoFinale = document.getElementById('prezzoFinale')
     prezzoFinale.innerHTML = prezzo.toFixed(2)
 }
+
+if (eta <65 && eta >18) {
+    document.getElementById("scontoHidden").style.display = "none";
+    document.getElementById("prezzoHidden").style.display = "none";
+}
